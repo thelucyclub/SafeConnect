@@ -1,3 +1,4 @@
+<?php
 namespace thelucyclub\SafeConnect;
 
 use pocketmine;
