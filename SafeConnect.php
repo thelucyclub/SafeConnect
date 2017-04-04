@@ -16,7 +16,7 @@ public function onLoad() {
 
 public function onPlayerPreLoginEvent(PlayerPreLoginEvent $event) {
   $player = $event->getPlayer();
-  Server::getInstance()->getLogger()->waring("$player is connecting... Please be patient");
+  Server::getInstance()->getLogger()->warning("$player is connecting... Please be patient");
   $player->sendTip(TF::BLUE . "[SafeConnect] $player does not pose a possible threat\n\n\n" . TF::LIGHT_PURPLE . "Your ping is below 500ms. Impressive!");
   $output = shell_exec('ping -c1 dl.thelucyclub.ml/ip_mcpe-deny.json');
   if($output == "" or $output == "down") {
